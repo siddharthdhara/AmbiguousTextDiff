@@ -1,0 +1,1 @@
+data/testing/LIDC-IDRI-0004/nodule-0/images/slice-0.png
