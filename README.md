@@ -143,6 +143,10 @@ Each annotation includes:
 - **Quantitative measurements**: diameter, volume, slice indices, bounding box
 - **Natural language descriptions**: Converted numerical ratings to clinical terminology
 
+**Note on prompts:** the annotation files also store diameter, volume, slice indices, and bounding boxes, but the text encoder truncates prompts at 128 tokens, so these trailing fields are never seen by the model (the numeric ratings and categorical labels up to spiculation are). The leading annotation id is an arbitrary database index, not a clinical descriptor.
+
+Supplementary material (pseudocode, hyperparameters, extra results, baseline training details): [docs/supplementary.pdf](docs/supplementary.pdf).
+
 ## Evaluation Metrics
 
 Our evaluation framework uses specialized metrics for ambiguous segmentation:
